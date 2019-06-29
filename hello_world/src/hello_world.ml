@@ -1,4 +1,7 @@
-(* how the hell this function is invoked?! *)
+(* 
+    how the hell this function is invoked?! 
+    (seems like it is not a function but "unit" on a left side?) 
+*)
 let () = print_endline "hello world!"
 
 (* defining a function *)
@@ -17,7 +20,7 @@ let rec range a b =
 
 (* 
     Printing result of function call. 
-    Do not understand what 'let () = ' syntax means.
+    Still do not understand what 'let () = ' syntax meansgit .
 *)
 let () = print_endline (string_of_float (average 12.0 2.0))
 
@@ -32,12 +35,18 @@ let () = List.iter
 
 
 (* declaring reference *)
-let reference = ref 0;;
+let reference = ref 0
 
 (* reference reasign *)
-reference := 100;;
+let () = reference := 100
 
 (* dereferencing *)
 let () = print_endline (string_of_int !reference)
 
 
+(* local "variable" (really local expression) *)
+let average_new a b =
+    let sum = a +. b in
+    sum /. 2.
+
+let () = print_endline (string_of_float (average_new 20. 30.))

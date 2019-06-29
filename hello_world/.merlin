@@ -1,3 +1,6 @@
 S src
 
 PKG graphics
+
+B _build
+B _build/src
