@@ -1,0 +1,8 @@
+(library
+    (name PriorityQueue)
+    (modules PriorityQueue))
+
+(executable
+    (name modules)
+    (modules Modules)
+    (libraries PriorityQueue))
